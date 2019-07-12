@@ -18,10 +18,23 @@ import UIKit
  5
  */
 
-func returnN(_ num: Int) {
-    for number in 1...num {
-        print(number)
-    }
-}
+// 기존 코드
 
-returnN(5)
+// 실제 console 상으로는 한줄에 num 한개씩 배출이 되는것처럼 보이나 실제로는 그렇지 않은듯하다?
+// 원인은 잘 모르겠지만 정답 코드와 비교했을때 readLine()라는 친구를 눈여겨봐야될듯하다
+
+//func returnN(_ num: Int) {
+//    for number in 1...num {
+//        print(number)
+//    }
+//}
+//
+//returnN(5)
+
+// 정답으로 표시된 코드
+
+let line = readLine() ?? ""
+let a = Int(line) ?? 0
+for index in 1...a {
+    print(index)
+}
