@@ -29,3 +29,14 @@
 > 첫째 줄부터 N번째 줄 까지 차례대로 출력한다.
 
 결과 : [기찍N](https://github.com/92pino/Lazy_algorithm/blob/master/Algo2742.playground/Contents.swift)
+
+3. 별찍기1
+
+> #### ㅁ 문제
+> 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
+> #### ㅁ 입력
+> 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
+> #### ㅁ 출력
+> 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+
+결과 : [별찍기1](https://github.com/92pino/Lazy_algorithm/blob/master/Algo2438.playground/Contents.swift)
