@@ -63,3 +63,9 @@
 > 첫째 줄에 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력한다.
 
 결과 : [한수](https://github.com/92pino/Lazy_algorithm/blob/master/Algo1065.playground/Contents.swift)
+
+# BOJ 단계별 알고리즘
+
+## 1단계
+
+## 2단계
