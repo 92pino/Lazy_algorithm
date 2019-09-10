@@ -67,7 +67,7 @@
 # BOJ 단계별 알고리즘
 
 ## 1단계
-- [Hello World(BOJ 2557)](https://github.com/92pino/Lazy_algorithm/tree/master/1%EB%8B%A8%EA%B3%84/Algo2557.playground)
+- [Hello World(BOJ 2557)](https://github.com/92pino/Lazy_algorithm/tree/master/1%EB%8B%A8%EA%B3%84/Algo2557.playground/Contents.swift)
 - [We love kriii(BOJ 10718)](https://github.com/92pino/Lazy_algorithm/blob/master/1%EB%8B%A8%EA%B3%84/Algo10718.playground/Contents.swift)
 - [고양이(BOJ 10171)](https://github.com/92pino/Lazy_algorithm/blob/master/1%EB%8B%A8%EA%B3%84/Algo0171.playground/Contents.swift)
 - [사칙연산(BOJ 10869)](https://github.com/92pino/Lazy_algorithm/blob/master/1%EB%8B%A8%EA%B3%84/Algo10869.playground/Contents.swift)
