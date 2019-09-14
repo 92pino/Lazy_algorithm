@@ -31,17 +31,17 @@
 
 | - | 문제 | 유형 | 풀이 |
 | :---: | :---: | :---: | :---: |
-| 1 | 구구단(BOJ 2739) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3단계/Algo2739.playground/Contents.swift) |
-| 2 | N찍기(BOJ 2741) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3단계/Algo2741.playground/Contents.swift) |
-| 3 | 기찍N(BOJ 2742) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3단계/Algo2742.playground/Contents.swift) |
-| 3 | 별찍기 - 1(BOJ 2438) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3단계/Algo2438.playground/Contents.swift) |
-| 3 | 별찍기 - 2(BOJ 2439) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3단계/Algo2439.playground/Contents.swift) |
+| 1 | 구구단(BOJ 2739) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3%EB%8B%A8%EA%B3%84/Algo2739.playground/Contents.swift) |
+| 2 | N찍기(BOJ 2741) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3%EB%8B%A8%EA%B3%84/Algo2741.playground/Contents.swift) |
+| 3 | 기찍N(BOJ 2742) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3%EB%8B%A8%EA%B3%84/Algo2742.playground/Contents.swift) |
+| 3 | 별찍기 - 1(BOJ 2438) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3%EB%8B%A8%EA%B3%84/Algo2438.playground/Contents.swift) |
+| 3 | 별찍기 - 2(BOJ 2439) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/3%EB%8B%A8%EA%B3%84/Algo2439.playground/Contents.swift) |
 
 ## 6단계
 
 | - | 문제 | 유형 | 풀이 |
 | :---: | :---: | :---: | :---: |
-| 1 | 한수(BOJ 1065) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/6단계/Algo1065.playground/Contents.swift) |
+| 1 | 한수(BOJ 1065) | 유형 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/6%EB%8B%A8%EA%B3%84/Algo1065.playground/Contents.swift) |
 
 # 프로그래머스 알고리즘
 
