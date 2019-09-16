@@ -51,4 +51,4 @@
 | - | 문제 | 유형 | 풀이 |
 | :---: | :---: | :---: | :---: |
 | 1 | 모의고사 | 완전탐색 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/Programmers/모의고사.playground/Contents.swift) |
-
+| 2 | 준비중 | 완전탐색 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/Programmers/모의고사.playground/Contents.swift) |
