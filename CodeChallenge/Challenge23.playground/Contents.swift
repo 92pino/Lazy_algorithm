@@ -21,17 +21,24 @@ import UIKit
  */
 
 func challenge23(_ num: String) -> Bool {
-
-    var boolean = false
+    return Int(num) != nil
     
-    if Int(num) != nil {
-        boolean = true
-    } else {
-        boolean = false
-    }
-    
-    return boolean
+//    if Int(num) != nil {
+//        return true
+//    } else {
+//        return false
+//    }
 }
 challenge23("123456789")
 
+// 정규식 도전!!!
+func _challenge23(_ num: String, filter: String = "[a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ\\s]") -> Bool {
+    
+    let regex = try! NSRegularExpression(pattern: filter, options: [])
+    
+    let list = regex.matches(in: num, options: [], range: NSRange.init(location: 0, length: num.count))
+    print(list)
 
+    return true
+}
+_challenge23("1.234")
