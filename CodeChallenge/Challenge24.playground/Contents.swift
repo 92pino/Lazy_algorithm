@@ -55,3 +55,47 @@ for i in number {
 }
 
 print(resultb)
+
+// 다른 방식
+
+// 1
+func challenge24AnswerA(string: String) -> Int {
+    var currentNumber = ""
+    var sum = 0
+    
+    for letter in string {
+        let strLetter = String(letter)
+        
+        if Int(strLetter) != nil {
+            currentNumber += strLetter
+        } else {
+            sum += Int(currentNumber) ?? 0
+            currentNumber = ""
+        }
+    }
+    
+    print(sum)
+    return sum
+}
+challenge24AnswerA(string: "a10b20c30")
+
+// 2 - 정규식
+func challenge24AnswerB(string: String) -> Int {
+    let regex = try! NSRegularExpression(pattern: "(\\d+)", options: [])
+    let matches = regex.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+    
+    let allNumbers = matches.compactMap { Int((string as NSString).substring(with: $0.range)) }
+
+    print(allNumbers.reduce(0, +))
+    
+    return allNumbers.reduce(0, +)
+}
+challenge24AnswerB(string: "a10b20c30")
+
+// 3 - 정규식
+func challenge24AnswerC(string: String) -> Int {
+    return string.replacingOccurrences(of: "\\D+", with: "-", options: .regularExpression)
+        .split(separator: "-")
+        .reduce(0) { $0 + Int(String($1))! }
+}
+challenge24AnswerC(string: "a10b20c30")
