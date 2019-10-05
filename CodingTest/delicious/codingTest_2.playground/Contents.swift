@@ -25,3 +25,27 @@ func solution(_ n: Int) -> Bool {
     return n == reversedNum ? true : false
 }
 solution(21453)
+
+// 1번째 풀어본 방식
+func solution1(_ input: Int) -> Bool {
+    var result = false
+    
+    if String(input) == String(String(input).reversed()) {
+        result = true
+    } else {
+        false
+    }
+    
+    return result
+}
+solution1(12321)
+solution1(21453)
+
+// 2번째 풀어본 방식 - 조건문을 삼항연산자로 변경
+
+func solution2(_ input: Int) -> Bool {
+    
+    return String(input) == String(String(input).reversed()) ? true : false
+}
+solution2(12321)
+solution2(21453)
