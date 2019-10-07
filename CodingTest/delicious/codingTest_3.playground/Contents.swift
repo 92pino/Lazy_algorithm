@@ -65,26 +65,39 @@ import UIKit
  따라서 총 4번 바뀌었습니다.
  */
 
-// 1번째 풀어본 방식
-func solution1(_ input: Int) -> Bool {
-    var result = false
+func solution(_ k: Int, _ user_scores:[String]) -> Int {
+    var resultChangeCount = 0
     
-    if String(input) == String(String(input).reversed()) {
-        result = true
-    } else {
-        false
+    var nameKey: [String] = []
+    var gradeValue: [Int] = []
+    
+    var resultNameKey: [String] = []
+    var resultGradeValue: [Int] = []
+    
+    for i in user_scores {
+        let separator = i.split(separator: " ")
+        nameKey.append(String(separator[0]))
+        gradeValue.append(Int(separator[1])!)
+        
+        if resultGradeValue.count < k {
+            if resultGradeValue.count == 0 {
+                resultNameKey.append(nameKey[0])
+                resultGradeValue.append(gradeValue[0])
+                resultChangeCount += 1
+            } else {
+                for j in 1..<k {
+                    
+                }
+            }
+        }
     }
     
-    return result
-}
-solution1(12321)
-solution1(21453)
-
-// 2번째 풀어본 방식 - 조건문을 삼항연산자로 변경
-
-func solution2(_ input: Int) -> Bool {
+    print(resultGradeValue, resultChangeCount)
     
-    return String(input) == String(String(input).reversed()) ? true : false
+    return resultChangeCount
 }
-solution2(12321)
-solution2(21453)
+
+var aa = ["alex111 100", "cheries2 200", "alex111 200", "cheries2 150", "coco 50", "coco 200"]
+var bb = ["cheries2 200", "alex111 100", "coco 150", "puyo 120"]
+
+solution(3, aa)
