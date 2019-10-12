@@ -16,3 +16,24 @@ import UIKit
  - If asked to print the last 0 lines, your could should print nothing.
  
 */
+func challenge27(line: Int, _ input: [String]) -> String {
+    var result = ""
+    var arr = [String]()
+    var reverse = [String](input.reversed())
+    
+    if input.count < line {
+        result = reverse.joined(separator: ", ")
+    } else if line == 0 {
+        result = "empty"
+    } else {
+        result = reverse[0..<line].joined(separator: ", ")
+    }
+    
+    return result
+}
+
+var arr = ["Antony And Cleopatra", "Coriolanus", "Cymbeline", "Hamlet", "Julisus Caesar", "King Lear", "Macbeth", "Othello", "Twelfth Night"]
+
+challenge27(line: 3, arr)
+challenge27(line: 100, arr)
+challenge27(line: 0, arr)
