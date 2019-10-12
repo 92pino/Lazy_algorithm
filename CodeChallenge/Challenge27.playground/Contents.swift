@@ -37,3 +37,24 @@ var arr = ["Antony And Cleopatra", "Coriolanus", "Cymbeline", "Hamlet", "Julisus
 challenge27(line: 3, arr)
 challenge27(line: 100, arr)
 challenge27(line: 0, arr)
+
+// solution
+
+func challenge27a(fileName: String, lineCount: Int){
+    
+    guard let input = try? String(contentsOfFile: fileName) else { return }
+    
+    var lines = input.components(separatedBy: "\n")
+    guard lines.count > 0 else { return }
+    
+    lines.reverse()
+    
+    var output = [String]()
+    
+    for i in 0..<min(lines.count, lineCount) {
+        output.append(lines[i])
+    }
+    
+    print(output.joined(separator: ", "))
+}
+challenge27a(fileName: "example", lineCount: 3)
