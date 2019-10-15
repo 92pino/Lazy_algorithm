@@ -18,9 +18,33 @@ import UIKit
  
 */
 
-func challenge28(fileName: String) {
+func challenge28(fileName: String, msg: String) {
     
+    let fm = FileManager.default
+    let docDirectory = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let dataPath = docDirectory.appendingPathComponent(fileName)
     
+    do {
+        // 파일 이름을 기존의 경로에 추가
+        
+        if !fm.fileExists(atPath: dataPath.path) {
+            try fm.createDirectory(atPath: dataPath.path, withIntermediateDirectories: false, attributes: nil)
+        }
+        
+        let file:FileHandle? = FileHandle(forReadingAtPath: dataPath.path)
+        file?.seekToEndOfFile()
+        
+        let currDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        
+        guard let data = (" \(dateFormatter.string(from: currDate)) : \(msg)").data(using: String.Encoding.utf8) else { return }
+        
+        file?.write(data)
+    } catch let error as NSError {
+        print("Error Writing File : \(error.localizedDescription)")
+    }
     
 }
-challenge28(fileName: "example")
+challenge28(fileName: "example.log", msg: "test swift file write example")
+
