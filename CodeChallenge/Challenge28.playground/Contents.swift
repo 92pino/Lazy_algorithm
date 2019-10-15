@@ -48,3 +48,15 @@ func challenge28(fileName: String, msg: String) {
 }
 challenge28(fileName: "example.log", msg: "test swift file write example")
 
+// solution
+func challenge28a(log message: String, to logFile: String) {
+    var existingLog = (try? String(contentsOfFile: logFile)) ?? ""
+    existingLog.append("\(Date()): \(message)\n")
+    
+    do {
+        try existingLog.write(toFile: logFile, atomically: true, encoding: .utf8)
+    } catch {
+        print("Failed to write to log: \(error.localizedDescription)")
+    }
+}
+challenge28a(log: "example.log", to: "test swift file write example")
