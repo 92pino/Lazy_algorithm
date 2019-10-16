@@ -21,7 +21,26 @@ import UIKit
  n | result
  
  78    83
- ¢
+ 
  15    23
  
  */
+func solution(_ n: Int) -> Int {
+    var nonzeroCount = n.nonzeroBitCount
+    var highNum = n + 1
+    
+    print(nonzeroCount)
+    
+    while highNum.nonzeroBitCount != nonzeroCount {
+        highNum += 1
+    }
+    
+    return highNum
+}
+solution(78)
+
+// 다른 사람 풀이
+func solutionA(_ n: Int) -> Int {
+    return String(n, radix:2).map({ Int(String($0))!}).reduce(0, +)
+}
+solutionA(78)
