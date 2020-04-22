@@ -31,4 +31,4 @@ for _ in 0..<10 {
   remainder.insert(Int(readLine()!)! % 42)
 }
 
-print(remainder.count)
+print(remainder, remainder.count)
