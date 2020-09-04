@@ -41,3 +41,37 @@ func solution02(_ N: Int, _ stages: [Int]) -> [Int] {
 
 solution01(5, [2, 1, 2, 6, 2, 4, 3, 3])
 solution02(5, [2, 1, 2, 6, 2, 4, 3, 3])
+
+/*
+
+ 다른 방식으로 풀어보자
+ 
+*/
+
+func solution03(_ N: Int, _ stages: [Int]) -> [Int] {
+  
+  var failRate: [Double] = .init(repeating: 0, count: N)
+  
+  var userStages: [Int: Int] = [:]
+  
+  stages.forEach {
+    if let value = userStages[$0] {
+      userStages[$0] = value + 1
+    } else {
+      userStages[$0] = 1
+    }
+  }
+  
+  var user = stages.count
+  
+  userStages.keys.sorted().forEach {
+    guard let value = userStages[$0], $0 <= N else { return }
+    failRate[$0 - 1] = Double(value) / Double(user)
+    
+    user -= value
+  }
+  
+  return failRate.enumerated().sorted { $0.element > $1.element }.map { $0.offset + 1 }
+  
+}
+solution03(5, [2, 1, 2, 6, 2, 4, 3, 3])
