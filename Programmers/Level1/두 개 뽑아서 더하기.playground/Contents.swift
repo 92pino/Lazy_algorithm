@@ -8,10 +8,9 @@ func solution(_ numbers: [Int]) -> [Int] {
   var arr: Set<Int> = []
   for i in 0..<numbers.count {
     for j in 0..<numbers.count {
-      if i == j {
-        continue
+      if i != j {
+        arr.insert(numbers[i] + numbers[j])
       }
-      arr.insert(numbers[i] + numbers[j])
     }
   }
   return arr.sorted()

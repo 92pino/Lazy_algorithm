@@ -25,21 +25,31 @@ import UIKit
  
  */
 func solution(_ answers: [Int]) -> [Int] {
-    let answer = (
-        a : [1, 2, 3, 4, 5],
-        b : [2, 1, 2, 3, 2, 4, 2, 5],
-        c : [3, 3, 1, 1, 2, 2, 4, 4, 5, 5,]
-    )
-    
-    var result = [1:0, 2:0, 3:0]
-    
-    for (i,j) in answers.enumerated() {
-        if j == answer.a[i % 5] { result[1] = result[1]! + 1 }
-        if j == answer.a[i % 8] { result[2] = result[2]! + 1 }
-        if j == answer.a[i % 10] { result[3] = result[3]! + 1 }
+  let answer = (
+    a: [1, 2, 3, 4, 5],
+    b: [2, 1, 2, 3, 2, 4, 2, 5],
+    c: [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+  )
+  
+  var point: [Int: Int] = [1: 0, 2: 0, 3: 0]
+  
+  for (i, v) in answers.enumerated() {
+    if v == answer.a[i % 5] {
+      point[1] = point[1]! + 1
     }
     
-    return result.sorted { $0.key < $1.key }.filter { $0.value == result.values.max() }.map{ $0.key }
+    if v == answer.b[i % 8] {
+      point[2] = point[2]! + 1
+    }
+    
+    if v == answer.c[i % 10] {
+      point[3] = point[3]! + 1
+    }
+  }
+  
+  print(point.sorted { $0.key < $1.key }.filter { $0.value == point.values.max() }.map { $0.key })
+  
+  return [0]
 }
 
 var e1 = [1,2,3,4,5]

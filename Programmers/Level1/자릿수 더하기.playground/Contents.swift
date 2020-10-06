@@ -24,12 +24,20 @@ import UIKit
  
 */
 
+//func solution(_ n: Int) -> Int {
+//
+//    let num = String(n).compactMap { $0.wholeNumberValue }
+//    print(num)
+//
+//    return num.reduce(0, +)
+//
+//}
+
 func solution(_ n: Int) -> Int {
-    
-    let num = String(n).compactMap { $0.wholeNumberValue }
-    print(num)
-    
-    return num.reduce(0, +)
-    
+  let result = String(n).map { Int(String($0))! }.reduce(0, +)
+  print(result)
+  
+  return 0
 }
+
 solution(123)
