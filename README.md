@@ -4,10 +4,6 @@
 
 > Lazy developers are the space to study to make algorithms more efficient.
 
-## Reference
-- [Baekjoon Online Judge](https://www.acmicpc.net/)
-- [Programmers](https://programmers.co.kr/learn/challenges)
-
 # BOJ 단계별 알고리즘
 
 ## 1단계
@@ -54,3 +50,24 @@
 | :---: | :---: | :---: | :---: |
 | 1 | 모의고사 | 완전탐색 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/Programmers/모의고사.playground/Contents.swift) |
 | 2 | 준비중 | 완전탐색 | [바로가기](https://github.com/92pino/Lazy_algorithm/blob/master/BOJ/Programmers/모의고사.playground/Contents.swift) |
+
+-------------------------------------------------------------------------------------------------------------------
+
+## swift 알고리즘 시 알아두면 좋을 문법
+
+### wholeNumberValue [BOJ-2577]
+> ex ==> String(multiple).compactMap { $0.wholeNumberValue }   
+> 정수일 경우 그 Int형을 반환
+
+비슷하게 **isWholeNumber** 도 알아두면 좋을듯 ==> 정수인지 아닌지를 체크 
+
+### 원하는 자릿수까지 표현
+
+끝자리에서 반올림 됨
+String(format: "%.4f", 1.234567) // 1.2346
+
+-------------------------------------------------------------------------------------------------------------------
+
+## Reference
+- [Baekjoon Online Judge](https://www.acmicpc.net/)
+- [Programmers](https://programmers.co.kr/learn/challenges)
