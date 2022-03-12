@@ -9,15 +9,9 @@ import Foundation
 
 // 내 풀이
 let N = Int(readLine()!)!
-
 func factorial(n: Int) -> Int {
-    var result = 1
-    if n > 0 {
-        for i in 1...n {
-            result *= i
-        }
-    }
-    return result
+    if n == 0 { return 1 }
+    return n * factorial(n: n - 1)
 }
 print(factorial(n: N))
 
