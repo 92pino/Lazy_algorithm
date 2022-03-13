@@ -8,19 +8,16 @@
 import Foundation
 
 let str = readLine()!.split(separator: "-").map { String($0) }
-var plus = 0
-var minus = 0
-for (index, i) in str.enumerated() {
-    if i.contains("+") {
-        let sum = i.split(separator: "+").map { Int($0)! }.reduce(0, +)
-        plus += sum
-    } else {
-        if index == 0 {
-            minus += Int(i)!
-        } else {
-            minus -= Int(i)!
-        }
-    }
+let first = str[0].split(separator: "+").map { Int(String($0))! }
+var result = 0
+var temp = 0
+
+for i in first {
+    result += i
 }
 
-print(minus > 0 ? minus - plus : plus)
+for i in 1..<str.count {
+    temp += str[i].split(separator: "+").map { Int(String($0))! }.reduce(0, +)
+}
+
+print(result-temp)
