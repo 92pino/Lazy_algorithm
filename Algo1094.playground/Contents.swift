@@ -59,3 +59,6 @@ print(temp.count)
 
 // 정답으로 표시된 코드
 
+
+let a: [String: Int] = ["1": 1, "2": 2, "3": 3]
+print(a.enumerated)

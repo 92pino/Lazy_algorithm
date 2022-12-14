@@ -7,19 +7,11 @@
 
 import Foundation
 
-let input = readLine()!.split(separator: " ").map { Int($0)! }, M = input[0], N = input[1]
-var isPrimeNumber = true
+var A = [1, 3, 6, 4, 1, 2]
+A = [1, 2, 3]
+var num = 1
 
-for i in M..<N {
-    for j in 2..<i {
-        if i % j == 0 {
-            isPrimeNumber = false
-        }
-    }
-    
-    if isPrimeNumber == true {
-        print(i)
-    }
-    
-    isPrimeNumber = true
+while A.filter({ number in number == num}).count > 0 {
+    num += 1
 }
+print(num)

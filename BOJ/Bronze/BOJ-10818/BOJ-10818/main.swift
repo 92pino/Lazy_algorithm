@@ -7,27 +7,10 @@
 
 import Foundation
 
-if let num = readLine() {
-    if let input = readLine() {
-        let arr = input.split(separator: " ").map { Int($0)! }
+let _ = readLine()
+let arr = readLine()!.split(separator: " ").map { Int($0)! }
+print(arr.min()!, arr.max()!)
 
-        var min = 0
-        var max = 0
-
-        for i in 0..<Int(num)! {
-            for j in 0..<Int(num)! {
-                if i != j {
-                    if arr[i] > arr[j] {
-                        min = arr[j]
-                        max = arr[i]
-                    }
-                }
-            }
-        }
-
-        print(min, max)
-    }
-}
 
 // 왜 계속 시간초과가 나는지 모르겠다....
 //if let _ = readLine() {
