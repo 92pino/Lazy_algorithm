@@ -16,7 +16,7 @@ func increasingTriplet(_ nums: [Int]) -> Bool {
     for num in nums {
         if num < a {
             a = num
-        } else if num < b && a < b {
+        } else if num < b && a < num {
             b = num
         } else if b < num {
             return true
